@@ -1,3 +1,76 @@
 .page1 {
+    $blueStroke: #0071bc;
+    $redStroke: #ed1c24;
 
+    .nose-down {
+        border: black solid;
+        }
+    .nose-up {
+        border: #cccccc solid;
+    }
+    .directionLetter, .directionLetterStatic  {
+        font-size: 16px;
+        font-weight: bold;
+        text-anchor: middle;
+        stroke: none;
+        fill: white;
+        font-family: helvetica, sans-serif;
+     }
+     .targetLabel {
+         font-size: 16px;
+         font-weight: bold;
+         stroke:none;
+         text-anchor: middle;
+         font-family: helvetica, sans-serif;
+     }
+     svg {
+         display: block;
+         margin: auto;
+         stroke-width:1.5;
+         stroke-linejoin:bevel;
+     }
+.blue {
+  stroke:$blueStroke;
+  .hexagon {fill: #004071;}
+  animation: fromRed 1s;
 }
+.red {
+  stroke:$redStroke;
+  .hexagon{fill: #8b0304;}
+  animation: fromBlue 1s;
+}
+
+@keyframes fromBlue {
+  from {
+    stroke: $blueStroke;
+    fill: #004071;
+  }
+}
+@keyframes fromRed {
+  from {
+    stroke: $redStroke;
+    fill: #8b0304;
+  }
+}
+.directionArrow {
+  fill-opacity:0;
+}
+.directionArrowBottom {
+   fill:#CCCCCC;
+}
+.halfHex {
+   fill:white;
+}
+.avidWindow {
+   fill-opacity:0;
+}
+.mode1 {
+  fill: none;
+}
+
+.circle {
+  fill-opacity: 0;
+  stroke: black;
+}
+}
+

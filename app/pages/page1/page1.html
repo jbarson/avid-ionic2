@@ -1,15 +1,208 @@
 <ion-navbar *navbar>
-  <ion-title>Tab 1</ion-title>
+    <ion-title>Tab 1</ion-title>
 </ion-navbar>
 
 <ion-content padding class="page1">
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>www/app/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+    <h2>Bearing</h2>
+    <button outline (click)="direction = 0" >A</button>
+    <button (click)="direction = 30">A/B</button>
+    <button (click)="direction = 60">B</button>
+    <button (click)="direction = 90">B/C</button>
+    <button (click)="direction = 120">C</button>
+    <button (click)="direction = 150">C/D</button>
+    <button (click)="direction = 180">D</button>
+    <button (click)="direction = 210">D/E</button>
+    <button (click)="direction = 240">E</button>
+    <button (click)="direction = 270">E/F</button>
+    <button (click)="direction = 300">F</button>
+    <button (click)="direction = 330">F/A</button>
+    <br> Distance
+    <input type="range" [(ngModel)]="hdistance" max="30">{{ hdistance }}
+    <br> Altitude
+    <input type="range" min="-30" max=30 [(ngModel)]="vdistance">{{vdistance}}
+    <br> Bearing: {{ direction }}
+    <br> Range: {{ range() }}
+    <br> Band: {{ band() }}
+    <br>
+    <button (click)="reset()">Reset</button>
+    <h2>{{band()}} {{range()}} {{direction}}</h2>
+    <br>
+    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" id="avidWrapper" width="288" height="410" class="blue" viewbox="0 0 300 300">
+        <g id="testAvid" transform="translate(175,185)">
+            <defs>
+                <!-- defines the gradients (more CSS than HTML) -->
+                <radialGradient id="yellowGradient">
+                    <stop stop-color="#FCFBEB" offset="0.75"></stop>
+                    <stop stop-color="#F6F1B7" offset="0.95"></stop>
+                </radialGradient>
+                <radialGradient id="blueGradient">
+                    <stop stop-color="#B8E5FA" offset="0.6"></stop>
+                    <stop stop-color="#44C8F5" offset="0.95"></stop>
+                </radialGradient>
+                <radialGradient id="greenGradient">
+                    <stop stop-color="#DCF0EC" offset="0.50"></stop>
+                    <stop stop-color="#99D4C0" offset="0.95"></stop>
+                </radialGradient>
+                <radialGradient id="purpleGradient">
+                    <stop stop-color="#ebdfe4" offset="0.1"></stop>
+                    <stop stop-color="#d8bfc9" offset="0.95"></stop>
+                </radialGradient>
+            </defs>
+            <g id="avidColored">
+                <!-- All of this rotates -->
+                <g id="avidBackground">
+                    <polygon id="avidColoredHexagon" class="hexagon" points="77.94,135 155.88,0 77.94,-135 -77.94,-135 -155.88,0 -77.94,135 77.94,135"></polygon>
+                    <circle id="yellowCircle" fill="url(#yellowGradient)" r="135"></circle>
+                    <circle id="blueCircle" fill="url(#blueGradient)" r="97"></circle>
+                    <circle id="greenCircle" fill="url(#greenGradient)" r="59"></circle>
+                    <circle id="purpleCircle" fill="url(#purpleGradient)" r="25"></circle>
+                </g>
+                <g id="vectorArrows">
+                    <g id="vectorArrowsA">
+                        <polygon id="directionArrowTopA" points="-24.1,-157.5 -8.4,-182.3 8.4,-182.3 24.1,-157.5 24.1,-153.4 13.8,-153.4 13.8,-137 -13.8,-137 -13.8,-153.4 -24.1,-153.4"
+                        class="directionArrow"></polygon>
+                        <polygon id="directionArrowBottomA" points="-17,-135 17,-135 21,-145.6 5.9,-156.8 -5.9,-156.8 -21,-145.6" class="directionArrowBottom"></polygon>
+                        <polygon id="halfHexA" points="-4.3,-153.4 0,-160.6 4.3,-153.4  " class="halfHex"></polygon>
+                    </g>
+                    <g id="vectorArrowsB" transform="rotate(60,0,0)">
+                        <polygon id="directionArrowTopB" points="-24.1,-157.5 -8.4,-182.3 8.4,-182.3 24.1,-157.5 24.1,-153.4 13.8,-153.4 13.8,-137 -13.8,-137 -13.8,-153.4 -24.1,-153.4"
+                        class="directionArrow"></polygon>
+                        <polygon id="directionArrowBottomB" points="-17,-135 17,-135 21,-145.6 5.9,-156.8 -5.9,-156.8 -21,-145.6" class="directionArrowBottom"></polygon>
+                        <polygon id="halfHexB" points="-4.3,-153.4 0,-160.6 4.3,-153.4  " class="halfHex"></polygon>
+                    </g>
+                    <g id="vectorArrowsC" transform="rotate(120,0,0)">
+                        <polygon id="directionArrowTopC" points="-24.1,-157.5 -8.4,-182.3 8.4,-182.3 24.1,-157.5 24.1,-153.4 13.8,-153.4 13.8,-137 -13.8,-137 -13.8,-153.4 -24.1,-153.4"
+                        class="directionArrow"></polygon>
+                        <polygon id="directionArrowBottomC" points="-17,-135 17,-135 21,-145.6 5.9,-156.8 -5.9,-156.8 -21,-145.6" class="directionArrowBottom"></polygon>
+                        <polygon id="halfHexC" points="-4.3,-153.4 0,-160.6 4.3,-153.4  " class="halfHex"></polygon>
+                    </g>
+                    <g id="vectorArrowsD">
+                        <polygon id="directionArrowTopD" points="-24.1,157.5 -8.4,182.3 8.4,182.3 24.1,157.5 24.1,153.4 13.8,153.4 13.8,137 -13.8,137 -13.8,153.4 -24.1,153.4"
+                        class="directionArrow"></polygon>
+                        <polygon id="directionArrowBottomD" points="-17,135 17,135 21,145.6 5.9,156.8 -5.9,156.8 -21,145.6" class="directionArrowBottom"></polygon>
+                        <polygon id="halfHexD" points="-4.3,153.4 0,160.6 4.3,153.4  " class="halfHex"></polygon>
+                    </g>
+                    <g id="vectorArrowsE" transform="rotate(60,0,0)">
+                        <polygon id="directionArrowTopE" points="-24.1,157.5 -8.4,182.3 8.4,182.3 24.1,157.5 24.1,153.4 13.8,153.4 13.8,137 -13.8,137 -13.8,153.4 -24.1,153.4"
+                        class="directionArrow"></polygon>
+                        <polygon id="directionArrowBottomE" points="-17,135 17,135 21,145.6 5.9,156.8 -5.9,156.8 -21,145.6" class="directionArrowBottom"></polygon>
+                        <polygon id="halfHexE" points="-4.3,153.4 0,160.6 4.3,153.4  " class="halfHex"></polygon>
+                    </g>
+                    <g id="vectorArrowsF" transform="rotate(120,0,0)">
+                        <polygon id="directionArrowTopF" points="-24.1,157.5 -8.4,182.3 8.4,182.3 24.1,157.5 24.1,153.4 13.8,153.4 13.8,137 -13.8,137 -13.8,153.4 -24.1,153.4"
+                        class="directionArrow"></polygon>
+                        <polygon id="directionArrowBottomF" points="-17,135 17,135 21,145.6 5.9,156.8 -5.9,156.8 -21,145.6" class="directionArrowBottom"></polygon>
+                        <polygon id="halfHexF" points="-4.3,153.4 0,160.6 4.3,153.4  " class="halfHex"></polygon>
+                    </g>
+                </g>
+                <g class="textLabels">
+                    <text id="iconAvidLabelAText" x="0" y="-137.5" class="directionLetter rotatable">A</text>
+                    <text id="iconAvidLabelBText" x="124.5" y="-66.5" class="directionLetter rotatable">B</text>
+                    <text id="iconAvidLabelCText" x="124.5" y="79.5" class="directionLetter rotatable">C</text>
+                    <text id="iconAvidLabelDText" x="0" y="149.5" class="directionLetter rotatable">D</text>
+                    <text id="iconAvidLabelEText" x="-125.5" y="78.5" class="directionLetter rotatable">E</text>
+                    <text id="iconAvidLabelFText" x="-125.5" y="-65.5" class="directionLetter rotatable">F</text>
+                    <text id="iconAvidLabelABText" x="38.5" y="-62.5" class="directionLetter rotatable">A/B</text>
+                    <text id="iconAvidLabelBCText" x="77.5" y="5.5" class="directionLetter rotatable">B/C</text>
+                    <text id="iconAvidLabelCDText" x="38.5" y="72" class="directionLetter rotatable">C/D</text>
+                    <text id="iconAvidLabelDEText" x="-38.5" y="72" class="directionLetter rotatable">D/E</text>
+                    <text id="iconAvidLabelEFText" x="-77.5" y="5.5" class="directionLetter rotatable">E/F</text>
+                    <text id="iconAvidLabelFAText" x="-38.5" y="-62.5" class="directionLetter rotatable">F/A</text>
+                </g>
+                <g id="avidWindows">
+                    <circle id="b90_pol" r="25" class="avidWindow"></circle>
+                    <path id="b60_000" d="M 12.5,-21.65L 29.5,-51.1A 59,59 0 0,0 -29.5,-51.1L -12.5,-21.65A 25,25 0 0 1 12.5,-21.65z" class="avidWindow"></path>
+                    <path id="b60_060" d="M 25,0L 59,0A 59,59 0 0,0 29.5,-51.1L 12.5,-21.65A 25,25 0 0 1 25,0z" class="avidWindow"></path>
+                    <path id="b6_.120" d="M 12.5,21.65L 29.5,51.1A 59,59 0 0,0 59,0L 25,0A 25,25 0 0 1 12.5,21.65z" class="avidWindow"></path>
+                    <path id="b60_180" d="M 12.5,21.65L 29.5,51.1A 59,59 0 0 1 -29.5,51.1L -12.5,21.65A 25,25 0 0 0 12.5,21.65z" class="avidWindow"></path>
+                    <path id="b60_240" d="M -12.5,21.65L -29.5,51.1A 59,59 0 0 1 -59,0L -25,0A 25,25 0 0 0 -12.5,21.65z" class="avidWindow"></path>
+                    <path id="b6_.300" d="M -25,0L -59,0A 59,59 0 0 1 -29.5,-51.1L -12.5,-21.65A 25,25 0 0 0 -25,0z" class="avidWindow"></path>
+                    <path id="b30_000" d="M15.27,-56.99 L25.11,-93.69 A97,97 0 0 0 -25.11,-93.69 L-15.27,-56.99 A59,59 0 0 1 15.27,-56.99 z"
+                    class="avidWindow"></path>
+                    <path id="b30_030" d="M41.72,-41.72 L68.59,-68.59 A97,97 0 0 0 25.11,-93.69 L 15.27,-56.99 A59,59 0 0 1 41.72,-41.72 z" class="avidWindow"></path>
+                    <path id="b30_060" d="M56.99,-15.27 L93.69,-25.11 A97,97 0 0 0 68.59,-68.59 L41.72,-41.72 A59,59 0 0 1 56.99,-15.27 z" class="avidWindow"></path>
+                    <path id="b30_090" d="M56.99,15.27 L93.69,25.11 A97,97 0 0 0 93.69,-25.11 L56.99,-15.27 A59,59 0 0 1 56.99,15.27 z" class="avidWindow"></path>
+                    <path id="b30_120" d="M56.99,15.27 L93.69,25.11 A97,97 0 0 1 68.59,68.59 L41.72,41.72 A59,59 0 0 0 56.99,15.27 z" class="avidWindow"></path>
+                    <path id="b30_150" d="M41.72,41.72 L68.59,68.59 A97,97 0 0 1 25.11,93.69 L 15.27,56.99 A59,59 0 0 0 41.72,41.72 z" class="avidWindow"></path>
+                    <path id="b30_180" d="M-15.27,56.99 L-25.11,93.69 A97,97 0 0 0 25.11,93.69 L15.27,56.99 A59,59 0 0 1 -15.27,56.99 z" class="avidWindow"></path>
+                    <path id="b30_210" d="M-41.72,41.72 L-68.59,68.59 A97,97 0 0 0 -25.11,93.69 L -15.27,56.99 A59,59 0 0 1 -41.72,41.72 z" class="avidWindow"></path>
+                    <path id="b30_240" d="M-56.99,15.27 L-93.69,25.11 A97,97 0 0 0 -68.59,68.59 L-41.72,41.72 A59,59 0 0 1 -56.99,15.27 z" class="avidWindow"></path>
+                    <path id="b30_270" d="M-56.99,15.27 L-93.69,25.11 A97,97 0 0 1 -93.69,-25.11 L-56.99,-15.27 A59,59 0 0 0 -56.99,15.27 z"
+                    class="avidWindow"></path>
+                    <path id="b30_300" d="M-56.99,-15.27 L-93.69,-25.11 A97,97 0 0 1 -68.59,-68.59 L-41.72,-41.72 A59,59 0 0 0 -56.99,-15.27 z"
+                    class="avidWindow"></path>
+                    <path id="b30_330" d="M-41.72,-41.72 L-68.59,-68.59 A97,97 0 0 1 -25.11,-93.69 L -15.27,-56.99 A59,59 0 0 0 -41.72,-41.72 z"
+                    class="avidWindow"></path>
+                    <path id="b00_000" d="M25.11,-93.69 L34.95,-130.4 A135,135 0 0 0 -34.95,-130.4 L-25.11,-93.69 A97,97 0 0 1 25.11,-93.69 z"
+                    class="avidWindow"></path>
+                    <path id="b00_030" d="M68.59,-68.59 L95.46,-95.46 A135,135 0 0 0 34.95,-130.4 L25.11,-93.69 A97,97 0 0 1 68.59,-68.59 z"
+                    class="avidWindow"></path>
+                    <path id="b00_060" d="M93.69,-25.11 L130.4,-34.95 A135,135 0 0 0 95.46,-95.46 L68.59,-68.59 A97,97 0 0 1 93.69,-25.11 z"
+                    class="avidWindow"></path>
+                    <path id="b00_090" d="M93.69,-25.11 L130.4,-34.95 A135,135 0 0 1 130.4,34.95 L93.69,25.11 A97,97 0 0 0 93.69,-25.11 z" class="avidWindow"></path>
+                    <path id="b00_120" d="M93.69,25.11 L130.4,34.95 A135,135 0 0 1 95.46,95.46 L68.59,68.59 A97,97 0 0 0 93.69,25.11 z" class="avidWindow"></path>
+                    <path id="b00_150" d="M68.59,68.59 L95.46,95.46 A135,135 0 0 1 34.95,130.4 L25.11,93.69 A97,97 0 0 0 68.59,68.59 z" class="avidWindow"></path>
+                    <path id="b00_180" d="M25.11,93.69 L34.95,130.4 A135,135 0 0 1 -34.95,130.4 L-25.11,93.69 A97,97 0 0 0 25.11,93.69 z" class="avidWindow"></path>
+                    <path id="b00_210" d="M-68.59,68.59 L-95.46,95.46 A135,135 0 0 0 -34.95,130.4 L-25.11,93.69 A97,97 0 0 1 -68.59,68.59 z"
+                    class="avidWindow"></path>
+                    <path id="b00_240" d="M-93.69,25.11 L-130.4,34.95 A135,135 0 0 0 -95.46,95.46 L-68.59,68.59 A97,97 0 0 1 -93.69,25.11 z"
+                    class="avidWindow"></path>
+                    <path id="b00_270" d="M-93.69,-25.11 L-130.4,-34.95 A135,135 0 0 0 -130.4,34.95 L-93.69,25.11 A97,97 0 0 1 -93.69,-25.11 z"
+                    class="avidWindow"></path>
+                    <path id="b00_300" d="M-93.69,-25.11 L-130.4,-34.95 A135,135 0 0 1 -95.46,-95.46 L-68.59,-68.59 A97,97 0 0 0 -93.69,-25.11 z"
+                    class="avidWindow"></path>
+                    <path id="b00_330" d="M-68.59,-68.59 L-95.46,-95.46 A135,135 0 0 1 -34.95,-130.4 L-25.11,-93.69 A97,97 0 0 0 -68.59,-68.59 z"
+                    class="avidWindow"></path>
+                </g>
+                <g id="directionIcons">
+                    <polygon id="iconNose" points="0,-7 8,7 -8,7" class="svgAxisPolygon" visibility="hidden"></polygon>
+                    <path id="iconTail" d="m8,-4 L-8,-4 A8,8 0,0,0 8,-4z" class="svgAxisPolygon" visibility="hidden"></path>
+                    <polygon id="iconTop" points="0,-8 2.35,-3.24 7.61,-2.47 3.8,1.24 4.7,6.47 0,4 -4.7,6.47 -3.8,1.24 -7.61,-2.47 -2.35,-3.24"
+                    class="svgAxisPolygon" visibility="hidden"></polygon>
+                    <path id="iconBottom" d="m0,-8 L0,8 M8,0 A4,4 0,0,1 -8,0" class="svgAxisPolygon" visibility="hidden"></path>
+                    <path id="iconLeft" d="m0,0 L4,2 L0,-4 L-4,2 L0,0" class="svgAxisPolygon" visibility="hidden"></path>
+                    <path id="iconRight" d="m0,0 L4,2 L0,-4 L-4,2 L0,0 M3,0 A3,5 0,0,1 -3,0" class="svgAxisPolygon" visibility="hidden"></path>
+                    <circle id="noseAftCircle" r="12" class="svgAxisCircle" visibility="hidden"></circle>
+                    <circle id="topBottomCircle" r="12" class="svgAxisCircle" visibility="hidden"></circle>
+                    <circle id="portStbCircle" r="12" class="svgAxisCircle" visibility="hidden"></circle>
+                    <g id="target1" opacity="0">
+                        <text x="0" y="5" class="targetLabel rotatable">0</text>
+                        <circle r="12" x="0" y="0" class="circle" opacity="0"></circle>
+                    </g>
+                </g>
+                <g range-heading-number></g>
+            </g>
+            <g id='nonrotatable'>
+                <g id="vectorArrows+">
+                    <polygon id="directionArrowTop+" points="-174.1,-157.5 -158.4,-182.3 -141.6,-182.3 -125.9,-157.5 -125.9,-153.4 -136.2,-153.4 -136.2,-137 -163.8,-137 -163.8,-153.4 -174.1,-153.4"
+                    class="directionArrow"></polygon>
+                    <polygon id="directionArrowBottom+" points="-167,-135  -133,-135  -129,-145.6  -144.1,-156.8  -155.9,-156.8  -171,-145.6"
+                    class="directionArrowBottom"></polygon>
+                    <polygon id="halfHex+" points="-154.3,-153.4 -150,-160.6 -145.3,-153.4  " class="halfHex"></polygon>
+                    <text id="iconAvidLabelPlusText" x="-150" y="-140" class="directionLetterStatic">+</text>
+                </g>
+                <g id="vectorArrows-">
+                    <polygon id="directionArrowTop-" points="125.9,157.5 141.6,182.3 158.4,182.3 174.1,157.5 174.1,153.4 163.8,153.4 163.8,137 136.2,137 136.2,153.4 125.9,153.4"
+                    class="directionArrow"></polygon>
+                    <polygon id="directionArrowBottom-" points="133,135 167,135 171,145.6 155.9,156.8 144.1,156.8 129,145.6" class="directionArrowBottom"></polygon>
+                    <polygon id="halfHex+" points="145.7,153.4 150,160.6 154.3,153.4  " class="halfHex"></polygon>
+                    <text id="iconAvidLabelMinusText" x="150" y="151.5" class="directionLetterStatic">-</text>
+                </g>
+                <g id="mode1DataDisplay" visibility="hidden" transform='translate(0,30)'>
+                    <!--TODO tranlate the coords in the polys and remove the translation-->
+                    <polygon points="-142.4,138.9 -117.6,154.6 -117.6,171.3 -142.4,186.9 -146.5,186.9 -146.5,176.6 -149.7,176.6 -149.7,149.1 -146.5,149.1 -146.5,138.9"
+                    class="directionArrow"></polygon>
+                    <polygon points="-44.4,179.9 -44.4,146 -55,142 -66.1,157.1 -66.1,168.8 -55,183.8" class="directionArrowBottom"></polygon>
+                    <polygon points="-100.1,138.9 -75.4,154.6 -75.4,171.3 -100.1,186.9 -104.2,186.9 -104.2,176.6 -120.6,176.6 -120.6,149.1 -104.2,149.1 -104.2,138.9"
+                    class="directionArrow"></polygon>
+                    <polygon points="-122.6,146 -122.6,179.9 -112,183.8 -100.9,168.8 -100.9,157.1 -112,142" class="directionArrowBottom"></polygon>
+                    <polyline points="-49.4,182 -49.4,188.3 -53.7,192.6 -128.4,192.6 -132.7,188.3" class="mode1"></polyline>
+                    <path d="m-132.7,188.3 l5,2 l-4,3 l0,0z" class="mode1"></path>
+                </g>
+            </g>
+        </g>
+    </svg>
+    <button (click)="changeSide()">Change Side</button>
+    <button (click)="rotate()">Rotate Clockwise</button>
+    <button (click)="shootTarget()">shoot</button>
 </ion-content>
