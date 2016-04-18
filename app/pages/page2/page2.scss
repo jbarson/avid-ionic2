@@ -1,3 +1,28 @@
 .page2 {
+    .hexagon {
+        fill-opacity: 0;
+        stroke:black;
+        }
+
+    .bigHexagon{
+        fill-opacity: 0;
+        stroke:blue;
+        stroke-width: 5;
+        }
+    .greenHexagon{
+        fill:green;
+        fill-opacity: 0.2;
+        stroke:black;
+        }
+
+    .letter{
+        font-size: 16px;
+        font-weight: bold;
+        text-anchor: middle;
+        stroke: none;
+        fill: black;
+        font-family: helvetica, sans-serif;
+        transform: translateY(5px);
+     }
 
 }
