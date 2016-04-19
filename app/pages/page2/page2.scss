@@ -1,4 +1,12 @@
 .page2 {
+    $ltPurple: #E0C4D3;
+    $satPurple: #C992AF;
+    $ltGreen: #BDE3DC;
+    $satGreen: #7CCCBF;
+    $ltBlue: #7ED3F7;
+    $satBlue: #00B3F0;
+    $ltYellow: #F4F3D3;
+    $satYellow: #EDEAAB;
     .hexagon {
         fill-opacity: 0;
         stroke:black;
@@ -10,8 +18,7 @@
         stroke-width: 5;
         }
     .greenHexagon{
-        fill:green;
-        fill-opacity: 0.2;
+        fill:$satGreen;
         stroke:black;
         }
 
@@ -24,5 +31,29 @@
         font-family: helvetica, sans-serif;
         transform: translateY(5px);
      }
+     .purple {fill: $ltPurple;}
+     .purple.c {fill: $satPurple;}
+     .green {fill: $ltGreen;}
+     .green.c {fill: $satGreen;}
+     .blue {fill: $ltBlue;}
+     .blue.c {fill: $satBlue;}
+     .yellow {fill: $ltYellow;}
+     .yellow.c {fill: $satYellow;}
+
+         rect{
+             fill:#fff;
+             stroke:black;
+
+         }
+         text {
+             font-size: 12px;
+             font-weight: bold;
+             text-anchor: middle;
+             stroke: none;
+             fill: black;
+             font-family: helvetica, sans-serif;
+             transform: translate(7px,12px);
+         }
+
 
 }
