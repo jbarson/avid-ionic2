@@ -39,6 +39,9 @@
      .blue.c {fill: $satBlue;}
      .yellow {fill: $ltYellow;}
      .yellow.c {fill: $satYellow;}
+     .puGr {
+             fill: -webkit-linear-gradient(-45deg, $ltPurple 0%, $ltPurple 50%, $ltgreen 51%, $ltgreen 100%);
+         }
 
          rect{
              fill:#fff;
@@ -54,6 +57,7 @@
              font-family: helvetica, sans-serif;
              transform: translate(7px,12px);
          }
+
 
 
 }
