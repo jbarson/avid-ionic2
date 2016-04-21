@@ -8,25 +8,46 @@
 
 
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" width="500" height="550">
-      <linearGradient id="puGr" x1="0" x2="0" y1="0" y2="1">
+      <linearGradient id="puGr" x1="0" x2="1" y1="0" y2="1">
         <stop offset="0%" stop-color="#E0C4D3"/>
         <stop offset="50%" stop-color="#E0C4D3"/>
         <stop offset="51%" stop-color="#BDE3DC"/>
         <stop offset="100%" stop-color="#BDE3DC"/>
       </linearGradient>
-      <linearGradient id="grBl" x1="0" x2="0" y1="0" y2="1">
-        <stop offset="0%" stop-color="red"/>
-        <stop offset="50%" stop-color="black"/>
-        <stop offset="51%" stop-color="black"/>
-        <stop offset="100%" stop-color="blue"/>
+      <linearGradient id="grBl" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0%" stop-color="#BDE3DC"/>
+        <stop offset="50%" stop-color="#BDE3DC"/>
+        <stop offset="51%" stop-color="#7ED3F7"/>
+        <stop offset="100%" stop-color="#7ED3F7"/>
       </linearGradient>
-      <linearGradient id="blYe" x1="0" x2="0" y1="0" y2="1">
-        <stop offset="0%" stop-color="red"/>
-        <stop offset="50%" stop-color="black"/>
-        <stop offset="51%" stop-color="black"/>
-        <stop offset="100%" stop-color="blue"/>
+      <linearGradient id="blYe" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0%" stop-color="#7ED3F7"/>
+        <stop offset="50%" stop-color="#7ED3F7"/>
+        <stop offset="51%" stop-color="#F4F3D3"/>
+        <stop offset="100%" stop-color="#F4F3D3"/>
+      </linearGradient>
+      <linearGradient id="grPu" x1="1" x2="0" y1="0" y2="1">
+        <stop offset="0%" stop-color="#BDE3DC"/>
+        <stop offset="50%" stop-color="#BDE3DC"/>
+        <stop offset="51%" stop-color="#E0C4D3"/>
+        <stop offset="100%" stop-color="#E0C4D3"/>
+      </linearGradient>
+      <linearGradient id="blGr" x1="1" x2="0" y1="0" y2="1">
+        <stop offset="0%" stop-color="#7ED3F7"/>
+        <stop offset="50%" stop-color="#7ED3F7"/>
+        <stop offset="51%" stop-color="#BDE3DC"/>
+        <stop offset="100%" stop-color="#BDE3DC"/>
+      </linearGradient>
+      <linearGradient id="yeBl" x1="1" x2="0" y1="0" y2="1">
+        <stop offset="0%" stop-color="#F4F3D3"/>
+        <stop offset="50%" stop-color="#F4F3D3"/>
+        <stop offset="51%" stop-color="#7ED3F7"/>
+        <stop offset="100%" stop-color="#7ED3F7"/>
       </linearGradient>
     <!--1 col-->
+        <g transform="translate(25,25)">
+           <text>0</text>
+        </g>
         <g class="vGrid" transform="translate(25,40)">
             <rect width="15" height="15" class="purple c"/>
             <text>10</text>
@@ -67,6 +88,7 @@
             <rect width="15" height="15" class="purple c"/>
             <text>1</text>
         </g>
+        <polygon points="20,190 35,197.5 20,205"/>
         <g class="vGrid" transform="translate(25,205)">
             <rect width="15" height="15" class="purple c"/>
             <text>1</text>
@@ -107,7 +129,13 @@
             <rect width="15" height="15" class="purple c"/>
             <text>10</text>
         </g>
-        <!--2 col-->
+        <g transform="translate(25,355)">
+           <text>0</text>
+        </g>
+<!--2 col-->
+        <g transform="translate(40,25)">
+           <text>1</text>
+        </g>
         <g class="vGrid" transform="translate(40,40)">
             <rect width="15" height="15" class="purple"/>
             <text>10</text>
@@ -133,7 +161,7 @@
             <text>5</text>
         </g>
         <g class="vGrid" transform="translate(40,130)">
-            <rect width="15" height="15" fill="url(#puGr)"/>
+            <rect width="15" height="15" class="puGr"/>
             <text>4</text>
         </g>
         <g class="vGrid" transform="translate(40,145)">
@@ -145,7 +173,7 @@
             <text>2</text>
         </g>
         <g class="vGrid" transform="translate(40,175)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="grBl"/>
             <text>1</text>
         </g>
         <g class="vGrid" transform="translate(40,190)">
@@ -153,46 +181,52 @@
             <text>1</text>
         </g>
         <g class="vGrid" transform="translate(40,205)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blGr"/>
             <text>1</text>
         </g>
         <g class="vGrid" transform="translate(40,220)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green c"/>
             <text>2</text>
         </g>
         <g class="vGrid" transform="translate(40,235)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>3</text>
         </g>
         <g class="vGrid" transform="translate(40,250)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="grPu"/>
             <text>4</text>
         </g>
         <g class="vGrid" transform="translate(40,265)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="purple"/>
             <text>5</text>
         </g>
         <g class="vGrid" transform="translate(40,280)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="purple"/>
             <text>6</text>
         </g>
         <g class="vGrid" transform="translate(40,295)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="purple"/>
             <text>7</text>
         </g>
         <g class="vGrid" transform="translate(40,310)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="purple"/>
             <text>8</text>
         </g>
         <g class="vGrid" transform="translate(40,325)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="purple"/>
             <text>9</text>
         </g>
         <g class="vGrid" transform="translate(40,340)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="purple"/>
             <text>10</text>
         </g>
-        <!--3 col-->
+        <g transform="translate(40,355)">
+           <text>1</text>
+        </g>
+<!--3 col-->
+        <g transform="translate(55,25)">
+           <text>2</text>
+        </g>
         <g class="vGrid" transform="translate(55,40)">
             <rect width="15" height="15" class="purple"/>
             <text>10</text>
@@ -202,475 +236,511 @@
             <text>9</text>
         </g>
         <g class="vGrid" transform="translate(55,70)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="puGr"/>
             <text>8</text>
         </g>
         <g class="vGrid" transform="translate(55,85)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>7</text>
         </g>
         <g class="vGrid" transform="translate(55,100)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>6</text>
         </g>
         <g class="vGrid" transform="translate(55,115)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>5</text>
         </g>
         <g class="vGrid" transform="translate(55,130)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green c"/>
             <text>4</text>
         </g>
         <g class="vGrid" transform="translate(55,145)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green c"/>
             <text>3</text>
         </g>
         <g class="vGrid" transform="translate(55,160)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="grBl"/>
             <text>2</text>
         </g>
         <g class="vGrid" transform="translate(55,175)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blue c"/>
             <text>2</text>
         </g>
         <g class="vGrid" transform="translate(55,190)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="yellow c"/>
             <text>2</text>
         </g>
         <g class="vGrid" transform="translate(55,205)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blue c"/>
             <text>2</text>
         </g>
         <g class="vGrid" transform="translate(55,220)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blGr"/>
             <text>2</text>
         </g>
         <g class="vGrid" transform="translate(55,235)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green c"/>
             <text>3</text>
         </g>
         <g class="vGrid" transform="translate(55,250)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green c"/>
             <text>4</text>
         </g>
         <g class="vGrid" transform="translate(55,265)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>5</text>
         </g>
         <g class="vGrid" transform="translate(55,280)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>6</text>
         </g>
         <g class="vGrid" transform="translate(55,295)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>7</text>
         </g>
         <g class="vGrid" transform="translate(55,310)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="grPu"/>
             <text>8</text>
         </g>
         <g class="vGrid" transform="translate(55,325)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="purple"/>
             <text>9</text>
         </g>
         <g class="vGrid" transform="translate(55,340)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="purple"/>
             <text>10</text>
         </g>
+        <g transform="translate(55,355)">
+           <text>2</text>
+        </g>
 <!--4-->
+        <g transform="translate(70,25)">
+           <text>3</text>
+        </g>
         <g class="vGrid" transform="translate(70,40 )">
             <rect width="15" height="15" class="green"/>
             <text>10</text>
         </g>
         <g class="vGrid" transform="translate(70,55 )">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>9</text>
         </g>
         <g class="vGrid" transform="translate(70,70 )">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>8</text>
         </g>
         <g class="vGrid" transform="translate(70,85 )">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>7</text>
         </g>
         <g class="vGrid" transform="translate(70,100)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green c"/>
             <text>6</text>
         </g>
         <g class="vGrid" transform="translate(70,115)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green c"/>
             <text>5</text>
         </g>
         <g class="vGrid" transform="translate(70,130)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>5</text>
         </g>
         <g class="vGrid" transform="translate(70,145)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="grBl"/>
             <text>4</text>
         </g>
         <g class="vGrid" transform="translate(70,160)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blue c"/>
             <text>3</text>
         </g>
         <g class="vGrid" transform="translate(70,175)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blue"/>
             <text>3</text>
         </g>
         <g class="vGrid" transform="translate(70,190)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="yellow c"/>
             <text>3</text>
         </g>
         <g class="vGrid" transform="translate(70,205)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blue"/>
             <text>3</text>
         </g>
         <g class="vGrid" transform="translate(70,220)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blue c"/>
             <text>3</text>
         </g>
         <g class="vGrid" transform="translate(70,235)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blGr"/>
             <text>4</text>
         </g>
         <g class="vGrid" transform="translate(70,250)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>5</text>
         </g>
         <g class="vGrid" transform="translate(70,265)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green c"/>
             <text>5</text>
         </g>
         <g class="vGrid" transform="translate(70,280)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green c"/>
             <text>6</text>
         </g>
         <g class="vGrid" transform="translate(70,295)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>7</text>
         </g>
         <g class="vGrid" transform="translate(70,310)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>8</text>
         </g>
         <g class="vGrid" transform="translate(70,325)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>9</text>
         </g>
         <g class="vGrid" transform="translate(70,340)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>10</text>
         </g>
+        <g transform="translate(70,355)">
+           <text>3</text>
+        </g>
 <!--5-->
+        <g transform="translate(85,25)">
+           <text>4</text>
+        </g>
         <g class="vGrid" transform="translate(85,40 )">
             <rect width="15" height="15" class="green"/>
             <text>10</text>
         </g>
         <g class="vGrid" transform="translate(85,55 )">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>9</text>
         </g>
         <g class="vGrid" transform="translate(85,70 )">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>8</text>
         </g>
         <g class="vGrid" transform="translate(85,85 )">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green c"/>
             <text>8</text>
         </g>
         <g class="vGrid" transform="translate(85,100)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green c"/>
             <text>7</text>
         </g>
         <g class="vGrid" transform="translate(85,115)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>6</text>
         </g>
         <g class="vGrid" transform="translate(85,130)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="grBl"/>
             <text>5</text>
         </g>
         <g class="vGrid" transform="translate(85,145)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blue"/>
             <text>5</text>
         </g>
         <g class="vGrid" transform="translate(85,160)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blue c"/>
             <text>4</text>
         </g>
         <g class="vGrid" transform="translate(85,175)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blYe"/>
             <text>4</text>
         </g>
         <g class="vGrid" transform="translate(85,190)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="yellow c"/>
             <text>4</text>
         </g>
         <g class="vGrid" transform="translate(85,205)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="yeBl"/>
             <text>4</text>
         </g>
         <g class="vGrid" transform="translate(85,220)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blue c"/>
             <text>4</text>
         </g>
         <g class="vGrid" transform="translate(85,235)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blue"/>
             <text>5</text>
         </g>
         <g class="vGrid" transform="translate(85,250)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blGr"/>
             <text>5</text>
         </g>
         <g class="vGrid" transform="translate(85,265)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>6</text>
         </g>
         <g class="vGrid" transform="translate(85,280)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green c"/>
             <text>7</text>
         </g>
         <g class="vGrid" transform="translate(85,295)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green c"/>
             <text>8</text>
         </g>
         <g class="vGrid" transform="translate(85,310)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>8</text>
         </g>
         <g class="vGrid" transform="translate(85,325)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>9</text>
         </g>
         <g class="vGrid" transform="translate(85,340)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>10</text>
         </g>
+        <g transform="translate(85,355)">
+           <text>4</text>
+        </g>
 <!--6-->
+        <g transform="translate(100,25)">
+           <text>5</text>
+        </g>
         <g class="vGrid" transform="translate(100,55 )">
             <rect width="15" height="15" class="green c"/>
             <text>10</text>
         </g>
         <g class="vGrid" transform="translate(100,70 )">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green c"/>
             <text>9</text>
         </g>
         <g class="vGrid" transform="translate(100,85 )">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>8</text>
         </g>
         <g class="vGrid" transform="translate(100,100)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>7</text>
         </g>
         <g class="vGrid" transform="translate(100,115)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="grBl"/>
             <text>7</text>
         </g>
         <g class="vGrid" transform="translate(100,130)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blue"/>
             <text>6</text>
         </g>
         <g class="vGrid" transform="translate(100,145)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blue c"/>
             <text>5</text>
         </g>
         <g class="vGrid" transform="translate(100,160)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blue"/>
             <text>5</text>
         </g>
         <g class="vGrid" transform="translate(100,175)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="yellow"/>
             <text>5</text>
         </g>
         <g class="vGrid" transform="translate(100,190)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="yellow c"/>
             <text>5</text>
         </g>
         <g class="vGrid" transform="translate(100,205)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="yellow"/>
             <text>5</text>
         </g>
         <g class="vGrid" transform="translate(100,220)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blue"/>
             <text>5</text>
         </g>
         <g class="vGrid" transform="translate(100,235)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blue c"/>
             <text>5</text>
         </g>
         <g class="vGrid" transform="translate(100,250)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blue"/>
             <text>6</text>
         </g>
         <g class="vGrid" transform="translate(100,265)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blGr"/>
             <text>7</text>
         </g>
         <g class="vGrid" transform="translate(100,280)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>7</text>
         </g>
         <g class="vGrid" transform="translate(100,295)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>8</text>
         </g>
         <g class="vGrid" transform="translate(100,310)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green c"/>
             <text>9</text>
         </g>
         <g class="vGrid" transform="translate(100,325)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green c"/>
             <text>10</text>
         </g>
+        <g transform="translate(100,355)">
+           <text>5</text>
+        </g>
 <!--7-->
+        <g transform="translate(115,25)">
+           <text>6</text>
+        </g>
         <g class="vGrid" transform="translate(115,55)">
             <rect width="15" height="15" class="green"/>
             <text>10</text>
         </g>
         <g class="vGrid" transform="translate(115,70)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>10</text>
         </g>
         <g class="vGrid" transform="translate(115,85 )">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>9</text>
         </g>
         <g class="vGrid" transform="translate(115,100)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="grBl"/>
             <text>8</text>
         </g>
         <g class="vGrid" transform="translate(115,115)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blue"/>
             <text>7</text>
         </g>
         <g class="vGrid" transform="translate(115,130)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blue c"/>
             <text>7</text>
         </g>
         <g class="vGrid" transform="translate(115,145)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blue c"/>
             <text>6</text>
         </g>
         <g class="vGrid" transform="translate(115,160)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blue"/>
             <text>6</text>
         </g>
         <g class="vGrid" transform="translate(115,175)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="yellow"/>
             <text>6</text>
         </g>
         <g class="vGrid" transform="translate(115,190)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="yellow c"/>
             <text>6</text>
         </g>
         <g class="vGrid" transform="translate(115,205)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="yellow"/>
             <text>6</text>
         </g>
         <g class="vGrid" transform="translate(115,220)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blue"/>
             <text>6</text>
         </g>
         <g class="vGrid" transform="translate(115,235)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blue c"/>
             <text>6</text>
         </g>
         <g class="vGrid" transform="translate(115,250)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blue c"/>
             <text>7</text>
         </g>
         <g class="vGrid" transform="translate(115,265)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blue"/>
             <text>7</text>
         </g>
         <g class="vGrid" transform="translate(115,280)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="blGr"/>
             <text>8</text>
         </g>
         <g class="vGrid" transform="translate(115,295)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>9</text>
         </g>
         <g class="vGrid" transform="translate(115,310)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>10</text>
         </g>
         <g class="vGrid" transform="translate(115,325)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="green"/>
             <text>10</text>
         </g>
+        <g transform="translate(115,355)">
+           <text>6</text>
+        </g>
 <!--8-->
+        <g transform="translate(130,25)">
+           <text>7</text>
+        </g>
         <g class="vGrid" transform="translate(130,70)" >
             <rect  width="15" height="15" class="green"/>
             <text>10</text>
         </g>
         <g class="vGrid" transform="translate(130,85)" >
-            <rect  width="15" height="15"/>
+            <rect  width="15" height="15" class="grBl"/>
             <text>9</text>
         </g>
         <g class="vGrid" transform="translate(130,100)">
-            <rect  width="15" height="15"/>
+            <rect  width="15" height="15" class="blue"/>
             <text>9</text>
         </g>
         <g class="vGrid" transform="translate(130,115)">
-            <rect  width="15" height="15"/>
+            <rect  width="15" height="15" class="blue"/>
             <text>8</text>
         </g>
         <g class="vGrid" transform="translate(130,130)">
-            <rect  width="15" height="15"/>
+            <rect  width="15" height="15" class="blue c"/>
             <text>8</text>
         </g>
         <g class="vGrid" transform="translate(130,145)">
-            <rect  width="15" height="15"/>
+            <rect  width="15" height="15" class="blue"/>
             <text>7</text>
         </g>
         <g class="vGrid" transform="translate(130,160)">
-            <rect  width="15" height="15"/>
+            <rect  width="15" height="15" class="blue"/>
             <text>7</text>
         </g>
         <g class="vGrid" transform="translate(130,175)">
-            <rect  width="15" height="15"/>
+            <rect  width="15" height="15" class="yellow"/>
             <text>7</text>
         </g>
         <g class="vGrid" transform="translate(130,190)">
-            <rect  width="15" height="15"/>
+            <rect  width="15" height="15" class="yellow c"/>
             <text>7</text>
         </g>
         <g class="vGrid" transform="translate(130,205)">
-            <rect  width="15" height="15"/>
+            <rect  width="15" height="15" class="yellow"/>
             <text>7</text>
         </g>
         <g class="vGrid" transform="translate(130,220)">
-            <rect  width="15" height="15"/>
+            <rect  width="15" height="15" class="blue"/>
             <text>7</text>
         </g>
         <g class="vGrid" transform="translate(130,235)">
-            <rect  width="15" height="15"/>
+            <rect  width="15" height="15" class="blue"/>
             <text>7</text>
         </g>
         <g class="vGrid" transform="translate(130,250)">
-            <rect  width="15" height="15"/>
+            <rect  width="15" height="15" class="blue c"/>
             <text>8</text>
         </g>
         <g class="vGrid" transform="translate(130,265)">
-            <rect  width="15" height="15"/>
+            <rect  width="15" height="15" class="blue"/>
             <text>8</text>
         </g>
         <g class="vGrid" transform="translate(130,280)">
-            <rect  width="15" height="15"/>
+            <rect  width="15" height="15" class="blue"/>
             <text>9</text>
         </g>
         <g class="vGrid" transform="translate(130,295)">
-            <rect  width="15" height="15"/>
+            <rect  width="15" height="15" class="blGr"/>
             <text>9</text>
         </g>
         <g class="vGrid" transform="translate(130,310)">
-            <rect  width="15" height="15"/>
+            <rect  width="15" height="15" class="green"/>
             <text>10</text>
         </g>
+        <g transform="translate(130,355)">
+           <text>7</text>
+        </g>
 <!--9-->
+        <g transform="translate(145,25)">
+           <text>8</text>
+        </g>
         <g class="vGrid" transform="translate(145,85)">
             <rect width="15" height="15" class="blue"/>
             <text>10</text>
@@ -708,7 +778,7 @@
             <text>8</text>
         </g>
         <g class="vGrid" transform="translate(145,220)">
-            <rect width="15" height="15"/>
+            <rect width="15" height="15" class="yeBl"/>
             <text>8</text>
         </g>
         <g class="vGrid" transform="translate(145,235)">
@@ -731,7 +801,13 @@
             <rect width="15" height="15" class="blue"/>
             <text>10</text>
         </g>
-<!--10 col-->
+        <g transform="translate(145,355)">
+           <text>8</text>
+        </g>
+<!--10-->
+        <g transform="translate(160,25)">
+           <text>9</text>
+        </g>
         <g class="vGrid" transform="translate(160,100)">
             <rect width="15" height="15" class="blue"/>
             <text>10</text>
@@ -784,7 +860,13 @@
             <rect width="15" height="15" class="blue"/>
             <text>10</text>
         </g>
+        <g transform="translate(160,355)">
+           <text>9</text>
+        </g>
 <!--11 col-->
+        <g transform="translate(175,25)">
+           <text>10</text>
+        </g>
         <g class="vGrid" transform="translate(175,130)">
             <rect width="15" height="15" class="blue"/>
             <text>10</text>
@@ -820,6 +902,73 @@
         <g class="vGrid" transform="translate(175,250)">
             <rect width="15" height="15" class="blue"/>
             <text>10</text>
+        </g>
+        <g transform="translate(175,355)">
+           <text>10</text>
+        </g>
+        <!--altitude labels-->
+        <g transform="translate(190,40)">
+            <text>+10</text>
+        </g>
+        <g transform="translate(190,55)">
+            <text>+9</text>
+        </g>
+        <g transform="translate(190,70)">
+            <text>+8</text>
+        </g>
+        <g transform="translate(190,85)">
+            <text>+7</text>
+        </g>
+        <g transform="translate(190,100)">
+            <text>+6</text>
+        </g>
+        <g transform="translate(190,115)">
+            <text>+5</text>
+        </g>
+        <g transform="translate(190,130)">
+            <text>+4</text>
+        </g>
+        <g transform="translate(190,145)">
+            <text>+3</text>
+        </g>
+        <g transform="translate(190,160)">
+            <text>+2</text>
+        </g>
+        <g transform="translate(190,175)">
+            <text>+1</text>
+        </g>
+        <g transform="translate(190,190)">
+            <text>0</text>
+        </g>
+        <g transform="translate(190,205)">
+            <text>-1</text>
+        </g>
+        <g transform="translate(190,220)">
+            <text>-2</text>
+        </g>
+        <g transform="translate(190,235)">
+            <text>-3</text>
+        </g>
+        <g transform="translate(190,250)">
+            <text>-4</text>
+        </g>
+        <g transform="translate(190,265)">
+            <text>-5</text>
+        </g>
+        <g transform="translate(190,280)">
+            <text>-6</text>
+        </g>
+        <g transform="translate(190,295)">
+            <text>-7</text>
+        </g>
+        <g transform="translate(190,310)">
+            <text>-8</text>
+        </g>
+        <g transform="translate(190,325)">
+            <text>-9</text>
+        </g>
+        <g transform="translate(190,340)">
+            <text>-10</text>
         </g>
     </svg>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" width="500" height="550" visibility="hidden">
