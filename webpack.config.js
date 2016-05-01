@@ -27,6 +27,10 @@ module.exports = {
         exclude: /node_modules/
       },
       {
+        test: require.resolve('snapsvg'),
+        loader: 'imports-loader?this=>window,fix=>module.exports=0'
+      },
+      {
         test: /\.js$/,
         include: path.resolve('node_modules/angular2'),
         loader: 'strip-sourcemap'
@@ -41,7 +45,8 @@ module.exports = {
   resolve: {
     root: ['app'],
     alias: {
-      'angular2': path.resolve('node_modules/angular2')
+      'angular2': path.resolve('node_modules/angular2'),
+      'snapsvg': path.resolve('node_modules/snapsvg')
     },
     extensions: ["", ".js", ".ts"]
   }

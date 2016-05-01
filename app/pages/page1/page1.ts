@@ -1,4 +1,5 @@
 import {Page} from "ionic-angular";
+import {Snap} from "snapsvg";
 
 
 @Page({
